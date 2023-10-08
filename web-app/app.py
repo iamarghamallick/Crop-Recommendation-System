@@ -34,7 +34,7 @@ def generate_image(crop):
 app = Flask(__name__)
 
 @app.route('/')
-def index():
+def home():
     return render_template("index.html")
 
 @app.route("/predict",methods=['POST'])
@@ -76,5 +76,5 @@ def predict():
     return render_template('index.html',result = result, crop = crop, input_data = input_data, img_url=img_url)
 
 
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")
+# if __name__ == "__main__":
+#     app.run()
